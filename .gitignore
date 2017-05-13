@@ -6,3 +6,4 @@ vendor
 archive
 pip-selfcheck.json
 lambda.zip
+.DS_Store

@@ -106,7 +106,9 @@ def map_to_commits(event):
     for commit in event['payload']['commits']:
         messages.append(commit['message'])
 
-    return '\n'.join(messages).replace('\n\n', '\n')
+    return '\n'.join(messages)
+               .replace('\n\n', '\n')
+               .replace('@', '')
 
 def filter_only_has_commits(event):
     return 'commits' in event['payload'] and event['payload']['commits']
